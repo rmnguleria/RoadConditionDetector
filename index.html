@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Roadconditiondetector : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Roadconditiondetector</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/rmnguleria/RoadConditionDetector">View on GitHub</a>
+
+          <h1 id="project_title">Roadconditiondetector</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/rmnguleria/RoadConditionDetector/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/rmnguleria/RoadConditionDetector/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a id="detecting-road-conditions-using-smartphone-sensors" class="anchor" href="#detecting-road-conditions-using-smartphone-sensors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Detecting Road Conditions Using Smartphone Sensors</h2>
+
+<h3>
+<a id="problem-statement" class="anchor" href="#problem-statement" aria-hidden="true"><span class="octicon octicon-link"></span></a>Problem Statement</h3>
+
+<p>Design and Develop a technique for detecting road anomalies using smartphone sensors where road anomalies include bumps, potholes,brake and rough road.</p>
+
+<h3>
+<a id="steps-involved" class="anchor" href="#steps-involved" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steps Involved</h3>
+
+<ol>
+<li>Data Collection
+
+<ol>
+<li>We'll be developing our own app for collecting the data (will be complete within 10 days i.e. till 27th January,2015). </li>
+<li>The data collected from the app will be processed using some filters like the Butterworth low-pass filter for expanding the number of features and compacting the number of samples for the reading window corresponding to one classification.</li>
+</ol>
+</li>
+<li>Data Cleaning
+
+<ol>
+<li>We'll be cleaning the data using R programming language.</li>
+<li>For a specific format of the raw data collected from smartphones, we have already developed a sub-project in R to clean the data. The specific format of raw data(and the actual raw dataset as well) from smartphones can be found at <a href="http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones">UCI Repository</a> and our sub-project for cleaning this data can be found on <a href="http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones">my github repository</a> (look for the file run_analysis.R).</li>
+<li>
+<strong>Note:</strong> The main aim for the <em>app of data collection</em> in step 1.1 is to create a dataset similar in format to the <em>one available on UCI link above</em> and with the exhaustive set of features <em>directly</em> and <em>derived through the application of certain filters</em> from the accelerometers as well for better classification. The data thus gathered by the app will be cleaned by a slightly modified version of the step 2.2 R sub-project.</li>
+</ol>
+</li>
+<li>Exploratory Data Analysis and Machine Learning
+
+<ol>
+<li>After cleaning the data, we'll analyze the tidy data set so as to select a sub-set of Machine Learning techniques to be applied.</li>
+<li>Applying specific ML techniques chosen in Step 3.1 </li>
+</ol>
+</li>
+<li>Evaluating the Machine Learning System
+
+<ol>
+<li>Each technique applied above will be evaluated against cross-validation data sets and test data sets which are too collected by the app in Step 1.1</li>
+<li>The best ML technique chosen from the above evaluation will be applied to learn the classification of potholes, bumps, etc and can be used further for prediction purposes.</li>
+</ol>
+</li>
+</ol>
+
+<h3>
+<a id="scope" class="anchor" href="#scope" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scope</h3>
+
+<ol>
+<li>A specific app will be developed for collecting the data which involves active participation of the smartphone user to classify manually whether the smartphone just went through a bump, pothole, braking, etc events. Hence, the data collection part is not crowd-sourced as of now(in the sense that it doesn't collect data in the background, but involves active participation of the user).</li>
+<li>As the final result, the machine learning system would be able to classify new readings from the smartphones. But still, it is uncertain that we will be able to make a final app with real-time classification and color-coding on the maps. But what we will be able to complete is that <em>collect a new reading using a <em>seperate</em> data collecting app</em>(which will support crowdsourcing and run in the background with no active participation of the user(i.e. no manual interaction for collection; the app will collect data silently) ), <em>the reading will be transferred to a computer</em> (may be through background uploading on our server), <em>where some pre-processing(1.2) and data cleaning(2) will be done</em> and <em>will predict what it is(a pothole, or something else) using the parameters(or weights) initially determined by the ML system on the training data set</em>.</li>
+<li>The server can then in future, color code that region(identfied by lat and long) on the map accordingly(based on the reading shown by maximum users on that particular spot on map) which would be available to all users to see.</li>
+</ol>
+
+<p>Contents of mail apart from this:</p>
+
+<ol>
+<li>This project can be followed on <a href="https://github.com/qubit93/RoadConditionDetector.git">RoadConditionDetector repo</a>.</li>
+<li>We have already started making the app for data collection and Raman will provide it to you by 27th January and will walk you through the data collection procedure and in general,using the app to collect data.</li>
+</ol>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Roadconditiondetector maintained by <a href="https://github.com/rmnguleria">rmnguleria</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
