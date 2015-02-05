@@ -5,7 +5,7 @@ Design and Develop a technique for detecting road anomalies using smartphone sen
 
 ###Steps Involved###
 1. Data Collection
- 1. We'll be developing our own app for collecting the data (will be complete within 10 days i.e. till 27th January,2015). 
+ 1. We'll be developing our own app for collecting the data. 
  2. The data collected from the app will be processed using some filters like the Butterworth low-pass filter for expanding the number of features and compacting the number of samples for the reading window corresponding to one classification.
 2. Data Cleaning
  1. We'll be cleaning the data using R programming language.
